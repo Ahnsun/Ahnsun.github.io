@@ -141,9 +141,9 @@ Jinrong Yang<sup>\*</sup>, **En Yu<sup>\*</sup>**, Zeming Li, Xiaoping Li, Wenbi
 - *2018.08* National Champion in the 14th National College Students' Intelligent Car Competition.
 
 # 📖 Educations
-- *2022.06 - 2023.12 (now)*, Huazhong University of Science and Technology, China.
-- *2020.09 - 2022.06*, Huazhong University of Science and Technology, Whhan, China. 
-- *2016.09 - 2020.06*, Huazhong University of Science and Technology, Wuhan, China. 
+- *2022.06 - 2023.12 (now)*, PhD, Huazhong University of Science and Technology, China.
+- *2020.09 - 2022.06*, Master, Huazhong University of Science and Technology, Whhan, China. 
+- *2016.09 - 2020.06*, Undergraduate, Huazhong University of Science and Technology, Wuhan, China. 
 
 # 💻 Internships
 - *2022.03 - 2023.12 (now)*, [MEGVII Research](https://en.megvii.com/), Foundation Model Group. 
