@@ -21,7 +21,7 @@ Hi, I am <strong>En Yu</strong> (于恩 in Chinese), a PhD student at <a href='h
 
 My research interest focuses on Computer Vision (CV) and Multi/Cross-Model Modeling, specifically inclduing 2D/3D Object Detection/Tracking, Video Understanding and Generation, and Multi-modal Large Languge Model (MLLM). I have published several papers <a href="https://scholar.google.com/citations?user=rWCQMNgAAAAJ&hl=en"><img src="https://img.shields.io/badge/Citations-240-blue.svg?logo=google-scholar&amp;labelColor=f6f6f6&amp;color=9cf&amp;style=flat&amp;label=citations"></a> at the top international AI conferences such as CVPR and AAAI. My next goal is to develop Multi-modal Foundation Models for the long-range video understanding and generation and then build embodied robots based on the foundation model to effectively learn from the world knowledge and interact with hummans.
 
-🎺🎺 <strong>I&rsquo; am preparing to go on a one-year overseas exchange visit and I’m currently looking forward to opportunities of PhD exchange visit for 2024 Summer.</strong> 
+🎺🎺 <strong>Great honor to be heading to the UCSB NLP Group, led by Prof. William, for a one-year PhD visiting! Looking forward to broadening the academic horizons and enhancing the research capabilities over the course of the next year. See you in California~</strong> 
 
 
 # 🔥 News
