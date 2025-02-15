@@ -1,0 +1,424 @@
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unhackable Temporal Rewarding for Scalable Video MLLMs</title>
+    <meta name="description" content="Video-UTR is a family of video-LMMs">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="robots" content="all">
+    <meta content="en_EN" property="og:locale">
+    <meta content="website" property="og:type">
+    <meta content="https://apollo-lmms.github.io" property="og:url">
+    <meta content="Apollo" property="og:title">
+    <meta content="UTR: Unhackable Temporal Rewarding for Scalable Video MLLMs" property="og:description">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@orrzohar">
+    <meta name="twitter:description" content="UTR: Unhackable Temporal Rewarding for Scalable Video MLLMs">
+    <meta name="twitter:image:src" content="assets/figures/clarity.png">
+    <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/foundation.min.css">
+    <link href="assets/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/figures_utr/fox.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": {
+              scale: 95,
+              fonts: ["Gyre-Pagella"],
+              imageFont: null,
+              undefinedFamily: "'Arial Unicode MS', cmbright"
+            },
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+              }
+          });
+    </script>
+    <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+        <div class="container blog" id="first-content" style="background: linear-gradient(135deg,
+        rgba(179, 198, 239, 0.566) 0%,   /* Martini clear liquid */
+        rgba(179, 198, 239, 0.88) 15%,  /* Light silver hint */
+        rgb(179, 198, 239) 35%,  /* Slightly darker silver */
+        rgba(134, 179, 146, 0.852) 70%,  /* Olive green */
+        rgba(134, 179, 146, 0.589) 100%  /* Lemon twist or vermouth */
+    );">
+        <div class="blog-title">
+            <div class="blog-intro">
+                <div>
+                    <h1 class="title" style="font-size: 2.0rem; animation: fadeInUp 1.5s ease-out, glow 2s ease-in-out infinite;">Unhackable Temporal Rewarding for Scalable Video MLLMs</h1>
+                    <style>
+                        @keyframes fadeInUp {
+                            from {
+                                opacity: 0;
+                                transform: translateY(20px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                        @keyframes glow {
+                            0% { text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+                            50% { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+                            100% { text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+                        }
+                    </style>
+                    <p class="author">
+                        <a href="https://ahnsun.github.io" class="author-link" target="_blank">En Yu</a>,
+                        <a href="" class="author-link" target="_blank">Kangheng Lin</a>,
+                        <a href="" class="author-link" target="_blank">Liang Zhao</a>,
+                        <a href="" class="author-link" target="_blank">Yana Wei</a>,
+                        <a href="" class="author-link" target="_blank">Zining Zhu</a>,
+                        <a href="" class="author-link" target="_blank">Haoran Wei</a>,
+                        <a href="" class="author-link" target="_blank">Jianjian Sun</a>,
+                        <a href="" class="author-link" target="_blank">Zheng Ge</a>,
+                        <a href="" class="author-link" target="_blank">Xiangyu Zhang</a>,
+                        <a href="" class="author-link" target="_blank">Jingyu Wang</a>, and
+                        <a href="" class="author-link" target="_blank">Wenbing Tao</a>
+                         </p>                    <p class="author" style="padding-top: 0px;">
+                        <sup>1</sup>HUST &nbsp;&nbsp; <sup>2</sup>StepAI
+                    </p>
+                    <p class="abstract">
+                        We investigate the shortcut learning in video multimodal large language models and systemally establish temporal  hacking theory. Our work includes: 
+                         <ul>
+                            <li>Systematic exploration of the video MLLM <b><i>unscaling phenomenon</i></b>, establishing temporal hacking theory from a novel RL perspective.</li>
+                            <li>Design of <b><i>Temporal Perplexity (TPL)</i></b> score, providing a reliable reference metric for mitigating temporal hacking.</li>
+                            <li>Proposing two principles to guide the design of proxy rewards for video-language modeling and further propose <b><i>Unhackable Temporal Rewarding (UTR)</i></b>.</li>
+                            <li>Introducing <b><i>Video-UTR</i></b>, a family of state-of-the-art video-LMMs.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="info">
+                    <div style="display: flex; gap: 20px;">
+                        <a href="-" class="button icon" style="background-color: rgba(255, 255, 255, 0.25); margin-bottom: 0;">Paper <i class="far fa-book-open"></i></a>
+                        <a href="https://github.com/linkangheng/Video-UTR" class="button icon" style="background-color: rgba(255, 255, 255, 0.25); margin-bottom: 0;">Code <i class="fas fa-code"></i></a>
+                        <a href="-" class="button icon" style="background-color: rgba(255, 255, 255, 0.25); margin-bottom: 0;">Slides <i class="fas fa-tv"></i></a>
+                        <a href="https://huggingface.co/Kangheng/Video-UTR-7b" class="button icon" style="background-color: rgba(255, 255, 255, 0.25); margin-bottom: 0;">Demo <i class="fa-light fa-face-smiling-hands"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-cover" style="position: relative; float: right; margin-left: 1px;">
+                <div style="background: transparent;">
+                    <img src="assets/figures_utr/nick_judy.png" alt="Demo" style="width: 140%; max-width: 700px; height: auto;">
+                </div>
+            </div>
+        </div> 
+    </div> 
+
+    <div class="container blog main first" id="blog-main">            
+        <p class="text">
+            We propose the theory of <b><i>temporal hacking</i></b>, from a reinforcement learning perspective, to explain <i>anti-scaling law</i> phenomenon in video MLLMs.
+            
+            We introduce a novel metric, <b><i>T</i></b>emporal <b><i>P</i></b>erp<b><i>l</i></b>exity (<b><i>TPL</i></b>), to quantify the severity of temporal assignment. Through extensive experiments, 
+            we use the TPL score to analyze the causes and features of temporal hacking, leading to the development of two <i>guiding principles</i> for video-language modeling.
+            Guided by these two principles, we further propose <b>U</b>nhackable <b>T</b>emporal <b>R</b>ewarding (<b>UTR</b>) and build a powerful video MLLM, ie., <b>Video-UTR</b>, a new family of state-of-the-art video-LMMs.
+
+        </p>
+        <div class="slideshow-overview" style="position: relative;">
+            <div class="slider-overview" style="display: flex; overflow: hidden;">
+                <div class="slider-item-overview" style="flex: 0 0 100%; transform: translateX(0%); transition: transform 1s ease;">
+                    <img src="assets/figures_utr/temporal_hacking.png" alt="Overview 1" style="width: 100%;">
+                </div>
+                <div class="slider-item-overview" style="flex: 0 0 100%; transform: translateX(0%); transition: transform 1s ease;">
+                    <img src="assets/figures_utr/utr_overview.png" alt="Overview 2" style="width: 100%;">
+                </div>
+            </div>
+            <button class="button icon" id="prev_overview" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); cursor: pointer; background: none; border: none;"><i class="fa-solid fa-left"></i></button>
+            <button class="button icon" id="next_overview" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); cursor: pointer; background: none; border: none;"><i class="fa-solid fa-right"></i></button>
+        </div>
+        <script>
+            let currentSlideIndex = 0;
+            let autoScrollInterval;
+            const overviewSlides = document.getElementsByClassName("slider-item-overview");
+            
+            function showSlide(index) {
+                if (index >= overviewSlides.length) {
+                    currentSlideIndex = 0;
+                } else if (index < 0) {
+                    currentSlideIndex = overviewSlides.length - 1;
+                } else {
+                    currentSlideIndex = index;
+                }
+                
+                for (let i = 0; i < overviewSlides.length; i++) {
+                    overviewSlides[i].style.display = "none";
+                }
+                overviewSlides[currentSlideIndex].style.display = "block";
+            }
+
+            document.getElementById("prev_overview").addEventListener("click", () => {
+                showSlide(currentSlideIndex - 1);
+                stopAutoScroll(); // Stop auto scroll when manually navigating
+            });
+            
+            document.getElementById("next_overview").addEventListener("click", () => {
+                showSlide(currentSlideIndex + 1);
+                stopAutoScroll(); // Stop auto scroll when manually navigating
+            });
+
+            function startAutoScroll() {
+                autoScrollInterval = setInterval(() => {
+                    showSlide(currentSlideIndex + 1);
+                }, 3000); // Change slides every 3 seconds
+            }
+
+            function stopAutoScroll() {
+                if (autoScrollInterval) {
+                    clearInterval(autoScrollInterval);
+                }
+            }
+
+            // Start auto-scrolling when page loads
+            startAutoScroll();
+
+            // Pause auto-scroll when hovering over the slideshow
+            document.querySelector('.slideshow-overview').addEventListener('mouseenter', stopAutoScroll);
+
+            // Resume auto-scroll when mouse leaves the slideshow
+            document.querySelector('.slideshow-overview').addEventListener('mouseleave', startAutoScroll);
+        </script>
+    </div>
+    <div class="container blog max Gray">
+
+        <div class="slideshow">
+            <div class="navigation">
+                <a class="button icon" id="prev_btn"><i class="fa-solid fa-left"></i></a>
+                <a class="button icon" id="next_btn"><i class="fa-solid fa-right"></i></a>
+                
+            </div>
+            <div class="slider">
+                <div class="slider-item">
+                    <img src="assets/findings_utr/temporal_perxility_diff3.png" alt="Finding 1" style="width: 100%; max-height:300px;">
+                    <p class="text">
+                        Finding 1: We discover the relationship between temporal perplexity and true model performance, where higher average TPL scores indicate a reduced likelihood of reward hacking, thereby leading to superior video comprehension.
+                </div>
+                <div class="slider-item">
+                    <img src="assets/findings_utr/attn.png" alt="Finding 1" style="height: 100%; width: 100%; max-width:1600px; max-height:500px;">
+                    <p class="text">
+                        <!-- Insert the corresponding text from txt_1.txt here -->
+                        Finding 2: Model trained on data with higher TPL activates more frames during inference.
+                </div>
+                <div class="slider-item">
+                    <img src="assets/findings_utr/attn2.png" alt="Finding 1" style="height: 100%; width: 100%; max-width:11600px;">
+                    <p class="text">
+                        Finding 3: Output attention visualization. Attention attending to more frames can avoid the loss if crucial details in the video make answers more accurate and detailed.
+                </div>
+                <div class="slider-item">
+                    <img src="assets/findings_utr/attn3.png" alt="Finding 1" style="height: 100%; width: 100%; max-width:11600px;">
+                    <p class="text">
+                        Finding 4: Video-text input attention visualization. Attention map with higher TPL score (right one) achieves a higher level of image-text alignment, with the input text being well-attended to the corresponding frame.
+                </div>
+                <div class="slider-item">
+                    <img src="assets/findings_utr/mean_loss.png" alt="Finding 1" style="height: 100%; width: 100%; max-width:11600px;">
+                    <p class="text">
+                        <!-- Insert the corresponding text from txt_1.txt here -->
+                        Finding 5: The TPL distribution can reflect the overall quality of the dataset. Several sub-datasets in VideoChat2, created from a first-person perspective, have higher TPL scores, indicating that their data quality is relatively high.
+                </div>
+                <div class="slider-item">
+                    <img src="assets/findings_utr/tpl_data2.png" alt="Finding 1" style="height: 100%; width: 100%; max-width:11600px;">
+                    <p class="text">
+                        Finding 6: Higher TPL score indicates a higher information density in the video or a more detailed description.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container blog main">
+        <h1>
+            Results
+        </h1>
+        <div style="overflow-x: auto; max-width: 100%;">
+            <table class="benchmark">
+                        
+                <style>
+                    table.benchmark {
+                        border-collapse: collapse;
+                        width: 100%;
+                        font-family: Charter;
+                        font-size: 14px;
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                    }
+                    table.benchmark th, table.benchmark td {
+                        border: 1px solid #ddd;
+                        padding: 10px;
+                        vertical-align: middle;
+                        text-align: center;
+                    }
+                    table.benchmark thead th {
+                        background: #f5f5f5;
+                        font-weight: bold;
+                    }
+                    table.benchmark th.rotate {
+                        white-space: nowrap;
+                        height: 165px;
+                        vertical-align: bottom;
+                        left: 50%; /* horizontally centers */
+                        padding: 10px 0px;
+                    }
+                    table.benchmark th.rotate > div {
+                        transform: translateX(50%) rotate(-90deg); 
+                        width: 20px;
+                    }
+                    table.benchmark .section-header {
+                        text-align: left;
+                        font-style: italic;
+                        background: #f9f9f9;
+                        font-weight: normal;
+                    }
+                    table.benchmark tr:nth-child(even) {
+                        background: #fcfcfc;
+                    }
+                    /* Gray background for ApolloBench columns */
+                    table.benchmark td:nth-last-child(-n+6), 
+                    table.benchmark th:nth-last-child(-n+6) {
+                        background: #f0f4fa;
+                    }
+                    /* Highlight selected rows (as in the original) */
+                    .bg-highlight {
+                        background: #e6eefb !important;
+                    }
+                    /* Bold model names */
+                    .bold {
+                        font-weight: bold;
+                    }
+                    .underline {
+                        text-decoration: underline;
+                    }
+                </style>
+            
+                <table class="benchmark">
+                    <thead>
+                        <tr>
+                            <th rowspan="3">Model</th>
+                            <th colspan="4">General Video Benchmarks</th>
+                            <th colspan="4">Video-QA Benchmarks</th>
+                        </tr>
+                        <tr>
+                            <th class="rotate"><div>TempCompass</div></th>
+                            <th class="rotate"><div>MVBench</div></th>
+                            <th class="rotate"><div>MMBen-Video</div></th>
+                            <th class="rotate"><div>VideoMME</div></th>
+            
+                            <th class="rotate"><div>MSVD-QA</div></th>
+                            <th class="rotate"><div>MSRVVT-QA</div></th>
+                            <th class="rotate"><div>TGIF-QA</div></th>
+                            <th class="rotate"><div>ANet-QA</div></th>
+                        </tr>
+                        <tr>
+                            <th>mc</th>
+                            <th>m-avg</th>
+                            <th>m-avg</th>
+                            <th>wo sub.</th>
+                            <th>Acc.</th><th>Acc.</th><th>Acc.</th><th>Acc.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="section-header"><td colspan="9">Proprietary</td></tr>
+                        <tr>
+                            <td>GPT-4V (OpenAI, 2023)</td>
+                            <td>-</td><td>43.5</td><td>-</td><td>59.9</td><td>-</td>
+                            <td>-</td><td>-</td><td>-</td>
+                        </tr>
+                        <tr>
+                            <td>GPT-4o (OpenAI, 2024)</td>
+                            <td>70.9</td><td>-</td><td>1.81</td><td>71.9</td><td>-</td>
+                            <td>-</td><td>-</td><td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Gemini-1.5-Flash (Team et al., 2023)</td>
+                            <td>-</td><td>-</td><td>1.63</td><td>70.3</td><td>-</td>
+                            <td>-</td><td>-</td><td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Gemini-1.5-Pro (Team et al., 2023)</td>
+                            <td>69.3</td><td>-</td><td>-</td><td>75.0</td><td>-</td>
+                            <td>-</td><td>-</td><td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Claude-3.5-Sonnet (Anthropic, 2024)</td>
+                            <td>-</td><td>-</td><td>1.35</td><td>60.0</td><td>-</td>
+                            <td>-</td><td>-</td><td>-</td>
+                        </tr>
+            
+                        <tr class="section-header"><td colspan="9">Open-Source</td></tr>
+                        <tr>
+                            <td>VideoChat2 (Li et al., 2024a)</td>
+                            <td>38.5</td><td>51.1</td><td>1.23</td><td>-</td><td>70.0</td>
+                            <td>54.1</td><td>-</td><td>49.1</td>
+                        </tr>
+                        <tr>
+                            <td>VideoLLaMA2 (Cheng et al., 2024a)</td>
+                            <td>-</td><td>54.6</td><td>-</td><td>46.6</td><td>70.9</td>
+                            <td>-</td><td>-</td><td>50.2</td>
+                        </tr>
+                        <tr>
+                            <td>LLaVA-N-Video-7B (Zhang et al., 2024f)</td>
+                            <td>-</td><td>54.6</td><td>-</td><td>33.7</td><td>67.8</td>
+                            <td>-</td><td>-</td><td>53.5</td>
+                        </tr>
+                        <tr>
+                            <td>LLaVA-OV-7B* (Li et al., 2024a)</td>
+                            <td>59.0</td><td>56.7</td><td>-</td><td>58.2</td><td>65.3</td>
+                            <td><b>43.3</b></td><td><b>52.8</b></td><td><b>56.6</b></td>
+                        </tr>
+                        <tr class="bg-highlight">
+                            <td class="bold">Video-UTR-7B</td>
+                            <td class="bold">59.7</td><td class="bold">58.8</td><td class="bold">1.35</td><td class="bold underline">52.6</td><td class="bold">73.5</td>
+                            <td class="bold">58.3</td><td class="bold">56.4</td><td class="bold underline">55.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container blog main">
+        <p class='text'>
+            Website under construction, more coming soon...
+        </p>
+    </div>
+
+    
+    <div class="container blog main">
+        <h1>Citation</h1>
+        <p class="text">
+            If you find this useful, please consider citing our work:
+        </p>
+
+<pre><code class="plaintext">@article{video-utr,
+    title={Unhackable Temporal Rewarding for Scalable Video MLLMs},
+    author={En Yu, Kangheng Lin, Liang Zhao, Yana Wei, Zining Zhu, Haoran Wei, Jianjian Sun, Zheng Ge, Xiangyu Zhang, Jingyu Wang, and Wenbing Tao},
+    journal={arXiv preprint arXiv:2412.10360},
+    year={2025}
+}</code></pre>
+    </div>
+
+
+    <!-- Footer Page -->
+    <footer>
+        <div class="container">
+            <p>
+                This website is built on the <a href="https://shikun.io/projects/clarity">Clarity Template</a>, designed by <a href="https://shikun.io/">Shikun Liu</a>.
+            </p>
+        </div>    
+    </footer>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="assets/scripts/star.js"></script>
+    <script src="clarity/clarity.js"></script>    
+    <script src="assets/scripts/main.js"></script>
+    </html>
+</body>
