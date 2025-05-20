@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "En Yu (于恩) - Homepage"
-description              : "PhD student in HUST. Focusing on Video Understanding and Generation, MLLM."
+description              : "PhD student at HUST. Focusing on Multimodal Foundation Model."
 repository               : "Ahnsun.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -24,13 +24,15 @@ author:
   name             : "En Yu (于恩)"
   avatar           : "images/Yu.png"
   bio              : "Huazhong University of Science and Technology (HUST)"
-  location         : "Beijing, China"
+  location         : |
+    Beijing, China
+    California, USA
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "yuen@hust.edu.cn"
+  email            : "yuen_daniel@outlook.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
-  uri              : "PhD student in HUST. Focusing on Video Understanding and Generation, MLLM."
+  uri              : "PhD student at HUST. Focusing on Multimodal Foundation Model."
   bitbucket        :
   codepen          :
   dribbble         :
