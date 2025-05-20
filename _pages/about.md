@@ -45,7 +45,7 @@ My research interest includes (1) Perception, Understanding and Reasoning with M
 
 - *2023.05*: &nbsp;🎉🎉 We present <a href='https://chatspot.streamlit.app/'>MOTRv3</a>, a fully end-to-end multiple object tracking model that achieves SOTA performance on DanceTrack, which outperforms the tracking-by-detection trackers for the first time.
 
-# 📝 Highlight Publications
+# 📝 Publications
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeuraIPS2025 Submission</div><img src='images/pr1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">

@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "En Yu (于恩) - Homepage"
-description              : "PhD student at HUST. Focusing on Multimodal Foundation Model."
+description              : "PhD student at HUST & visting PhD at UCSB. Focusing on Multimodal Foundation Model."
 repository               : "Ahnsun.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -24,10 +24,11 @@ author:
   name             : "En Yu (于恩)"
   avatar           : "images/Yu.png"
   bio              : "Huazhong University of Science and Technology (HUST)"
-  location         : Beijing, China; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; California, USA
+  location         : Beijing, China; <br>&nbsp;&nbsp;&nbsp;&nbsp; California, USA
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
+  website          : "https://ahnsun.github.io/"
   email            : "yuen_daniel@outlook.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              : "PhD student at HUST & visting PhD at UCSB. Focusing on Multimodal Foundation Model."
