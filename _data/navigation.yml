@@ -19,8 +19,4 @@ main:
     url: "/#-internships"
 
   - title: "CV"
-    url: "/#-cv"
-    children:
-      - title: "View PDF"
-        url: "images/enyu_cv.pdf"
-        target: "_blank"
+    url: "/images/enyu_cv.pdf"
