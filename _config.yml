@@ -29,6 +29,7 @@ author:
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
   website          : "https://ahnsun.github.io/"
+  twitter          : "https://x.com/EnYu_Daniel"
   email            : "yuen_daniel@outlook.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              : "PhD student at HUST & visting PhD at UCSB. Focusing on Multimodal Foundation Model."
@@ -52,7 +53,6 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : 
   vine             :
   weibo            :
   xing             :
