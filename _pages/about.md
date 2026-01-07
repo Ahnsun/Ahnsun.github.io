@@ -49,7 +49,7 @@ My research interest includes (1) Perception, Understanding and Reasoning with M
 
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeuraIPS2025 Submission</div><img src='images/pr1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeuraIPS2025 Poster</div><img src='images/pr1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Perception-R1: Pioneering Perception Policy with Reinforcement Learning](https://arxiv.org/pdf/2504.07954.pdf)
