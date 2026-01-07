@@ -25,6 +25,8 @@ My research interest includes (1) Perception, Understanding and Reasoning with M
 
 
 # 🔥 News
+- *2025.09*: &nbsp;🎉🎉 Happy to share that our paper <a href="https://openreview.net/forum?id=BeXcXrXetA">Perception-R1</a> and <a href="https://openreview.net/forum?id=oEgybA04dY">OVR</a> have both been accepted at NeurIPS 2025! Have fun in San Diego!
+  
 - *2025.04*: &nbsp;🎉🎉 We present <a href="https://arxiv.org/pdf/2504.07954">Perception-R1</a>. This work takes a pioneering step in exploring the potential of rule-based RL in MLLM post-training for perception policy learning.
 
 - *2025.02*: &nbsp;🎉🎉 Glad to announce that we have two papers, <a href="https://ahnsun.github.io/UTR/">Video-UTR</a> and <a href="https://arxiv.org/pdf/2503.10616">OVTR</a>, accepted for poster presentations at ICLR 2025! Let's see and have a chat in Singapore!
@@ -197,16 +199,17 @@ Jinrong Yang<sup>\*</sup>, **En Yu<sup>\*</sup>**, Zeming Li, Xiaoping Li, Wenbi
 - [Efficient few-shot classification via contrastive pre-training on web data](https://ieeexplore.ieee.org/abstract/document/9763033), Zhuoling Li, Haohan Wang, Tymosteusz Swistek, **En Yu**, Haoqian Wang, **IEEE Transactions on Artificial Intelligence**
 
 # 🎖 Honors and Awards
+- *2025.11* National Scholarship for Doctoral Students.
 - *2022.05* Second Prize in the First Global Artificial Intelligence Technology Innovation Competition. 
 - *2019.08* First Prize in the 13th National College Students' Intelligent Car Competition.
 - *2018.08* National Champion in the 14th National College Students' Intelligent Car Competition.
 
 # 📖 Educations
-- *2024.07 - 2025.05 (now)*, University of California, Santa Barbara (UCSB), USA.
-- *2022.06 - 2025.05 (now)*, Huazhong University of Science and Technology, China.
+- *2024.07 - 2025.07*, University of California, Santa Barbara (UCSB), USA.
+- *2022.06 - 2026.06 (excepted)*, Huazhong University of Science and Technology, Wuhan, China.
 - *2020.09 - 2022.06*, Huazhong University of Science and Technology, Whhan, China. 
 - *2016.09 - 2020.06*, Huazhong University of Science and Technology, Wuhan, China. 
 
 # 💻 Internships
 - *2022.03 - 2024.03*, [MEGVII Research](https://en.megvii.com/), Foundation Model Group. 
-- *2024.03 - 2025.05 (now)*, [StepFun AI](https://en.megvii.com/), Multimodal Intelligence Group. 
+- *2024.03 - 2026.01 (now)*, [StepFun](https://x.com/StepFun_ai), Multimodal Intelligence Team. 
