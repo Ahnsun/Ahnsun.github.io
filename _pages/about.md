@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I am <strong>En Yu</strong> (于恩 in Chinese), a PhD student at <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology <strong><span id="total_cit">(HUST)</span></strong></a> and visting PhD at <a href="https://www.hust.edu.cn/">University of California, Santa Barbara <strong><span id="total_cit">(UCSB)</span></strong></a>, cooperated with Prof.<a href="https://sites.cs.ucsb.edu/~william/">William Wang</a>.  I am currently interning at the Foundation Model Group of  <a href="https://www.stepfun.com/chats/new">StepFun AI</a>, where I work with Prof. <a href="https://scholar.google.com.hk/citations?user=yuB-cfoAAAAJ&amp;hl=en">Xiangyu Zhang</a> and Dr. <a href="https://joker316701882.github.io/">Zheng Ge</a>.
+Hi, I am <strong>En Yu</strong> (于恩 in Chinese), a PhD student at <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology <strong><span id="total_cit">(HUST)</span></strong></a> and visting PhD at <a href="https://www.hust.edu.cn/">University of California, Santa Barbara <strong><span id="total_cit">(UCSB)</span></strong></a>, cooperated with Prof.<a href="https://sites.cs.ucsb.edu/~william/">William Wang</a>.  I am currently interning at the Foundation Model Group of  <a href="https://www.stepfun.com/chats/new">StepFun</a>, where I work with Prof. <a href="https://scholar.google.com.hk/citations?user=yuB-cfoAAAAJ&amp;hl=en">Xiangyu Zhang</a> and Dr. <a href="https://joker316701882.github.io/">Zheng Ge</a>.
 
 My research interest includes (1) Perception, Understanding and Reasoning with Multimodal LLMs, and (2) Spatial Intelligence of Visual and Multimodal Foundation Models. I have published several papers <a href="https://scholar.google.com/citations?user=rWCQMNgAAAAJ&amp;hl=en"></a> at the top-level international AI conferences including ICLR, NeurIPS, CVPR, ECCV, ICCV, AAAI, ICML, etc. My next goal is to further build powerful multimodal foundation models and develop multimodal agents based on the foundation model to deal with complex real-world tasks, e.g., navigation, GUI-assistant and robotic tasks.
 
@@ -25,6 +25,8 @@ My research interest includes (1) Perception, Understanding and Reasoning with M
 
 
 # 🔥 News
+- *2026.01*: &nbsp;🔥🔥 We present <a href="https://arxiv.org/pdf/2601.09668">Step-VL-10B</a>, the best 10B multimodal model designed to redefine the trade-off between compact efficiency and frontier-level multimodal intelligence. All weights are open, check them out!🚀🚀
+- 
 - *2025.09*: &nbsp;🎉🎉 Happy to share that our paper <a href="https://openreview.net/forum?id=BeXcXrXetA">Perception-R1</a> and <a href="https://openreview.net/forum?id=oEgybA04dY">OVR</a> have both been accepted at NeurIPS 2025! Have fun in San Diego!
   
 - *2025.04*: &nbsp;🎉🎉 We present <a href="https://arxiv.org/pdf/2504.07954">Perception-R1</a>. This work takes a pioneering step in exploring the potential of rule-based RL in MLLM post-training for perception policy learning.
