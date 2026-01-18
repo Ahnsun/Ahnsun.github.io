@@ -26,7 +26,7 @@ My research interest includes (1) Perception, Understanding and Reasoning with M
 
 # 🔥 News
 - *2026.01*: &nbsp;🔥🔥 We present <a href="https://arxiv.org/pdf/2601.09668">Step-VL-10B</a>, the best 10B multimodal model designed to redefine the trade-off between compact efficiency and frontier-level multimodal intelligence. All weights are open, check them out!🚀🚀
-- 
+
 - *2025.09*: &nbsp;🎉🎉 Happy to share that our paper <a href="https://openreview.net/forum?id=BeXcXrXetA">Perception-R1</a> and <a href="https://openreview.net/forum?id=oEgybA04dY">OVR</a> have both been accepted at NeurIPS 2025! Have fun in San Diego!
   
 - *2025.04*: &nbsp;🎉🎉 We present <a href="https://arxiv.org/pdf/2504.07954">Perception-R1</a>. This work takes a pioneering step in exploring the potential of rule-based RL in MLLM post-training for perception policy learning.
